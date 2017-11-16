@@ -1,0 +1,12 @@
+version: "2.1"
+
+services:
+  syntaxnet:
+    image: fllaca/syntaxnet-server
+    volumes: 
+    - "./syntaxnet-lang-models:/lang_models"
+    environment:
+      #MODEL_DIR: /lang_models/Spanish-AnCora
+      MODEL_DIR: /lang_models/Spanish
+    ports:
+    - "80:80"
